@@ -9,5 +9,24 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./hero.scss']
 })
 export class Hero {
-  // Component logic here
+
+  downloadCV() {
+    window.open('assets/resume-example.pdf', '_blank');
+  }
+
+  scrollToContact() {
+    // If you have a contact section
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  goToLinkedIn() {
+    window.open('www.linkedin.com/in/reem-makarem-89468a2bb', '_blank');
+  }
+
+  goToGitHub() {
+    window.open('https://github.com/', '_blank');
+  }
 }

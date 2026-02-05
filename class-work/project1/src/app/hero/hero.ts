@@ -10,6 +10,9 @@ import { CommonModule } from '@angular/common';
 })
 export class Hero {
 
+  getImagePath(filename: string): string {
+    return `assets/${filename}`;
+  }
   downloadCV() {
     window.open('assets/resume-example.pdf', '_blank');
   }
@@ -23,7 +26,7 @@ export class Hero {
   }
 
   goToLinkedIn() {
-    window.open('www.linkedin.com/in/reem-makarem-89468a2bb', '_blank');
+    window.open('https://www.linkedin.com/in/reem-makarem-89468a2bb', '_blank');
   }
 
   goToGitHub() {

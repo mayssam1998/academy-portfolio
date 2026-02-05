@@ -1,0 +1,51 @@
+$color_1: rgb(85, 85, 85);
+$color_2: black;
+$color_3: grey;
+$font-family_1: "Poppins", sans-serif;
+
+/* GENERAL */
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap";
+/* DESKTOP NAV */
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: $font-family_1;
+}
+html {
+	scroll-behavior: smooth;
+}
+p {
+	color: $color_1;
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 10rem;
+	align-items: center;
+	height: 17vh;
+}
+.nav-links {
+	display: flex;
+	gap: 2rem;
+	list-style: none;
+	font-size: 1rem;
+}
+a {
+	color: $color_2;
+	text-decoration: none;
+	text-decoration-color: white;
+	&:hover {
+		color: $color_3;
+		text-decoration: underline;
+		text-underline-offset: 1rem;
+		text-decoration-color: rgb(181, 181, 181);
+	}
+}
+.logo {
+	font-size: 1rem;
+	&:hover {
+		cursor: pointer;
+	}
+}

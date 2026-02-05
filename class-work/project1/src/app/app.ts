@@ -1,0 +1,15 @@
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar';
+import { Hero } from './hero/hero';
+import {About} from './about/about';
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, NavbarComponent,Hero,About],
+  templateUrl: './app.html',
+  styleUrls: ['./app.scss']
+})
+export class AppComponent {
+  title = 'academy-portfolio';
+}

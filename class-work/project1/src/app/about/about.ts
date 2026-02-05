@@ -4,8 +4,8 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-about',
-  standalone: true,  // ← MUST HAVE THIS
-  imports: [CommonModule], // ← NEEDS IMPORTS ARRAY
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './about.html',
   styleUrls: ['./about.scss']
 })
@@ -16,9 +16,9 @@ export class About {
   educationDegree: string = 'B.Sc. Computer Engineering';
   educationInstitution: string = 'Lebanese American University';
 
-  aboutText: string = `Senior Computer Engineering student at Lebanese American University with a Math Minor and Honors Program.
-  Passionate about full-stack development, machine learning, and creating innovative solutions.
-  Experienced in various web technologies and frameworks with a strong foundation in algorithms and data structures.`;
+  aboutText: string = `I am Reem, a computer engineering student focused on software development and signal processing.
+          I build projects in Java,C++, and Python, and I’m especially interested
+          in applying tech to astronomy. Outside of coding, I like stargazing.`;
 
   skills: string[] = [
     'Angular',

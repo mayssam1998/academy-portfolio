@@ -1,1 +1,23 @@
-<p>projects works!</p>
+<section id="projects">
+  <p class="section__text__p1">Browse My Recent</p>
+  <h1 class="title">Projects</h1>
+
+  <select multiple (change)="onSelectionChange($event)">
+    <option *ngFor="let cat of categories" [value]="cat.id">{{ cat.name }}</option>
+  </select>
+
+  <div class="about-containers">
+    @for (project of projects; track project.id) {
+      <div class="details-container color-container">
+
+        <img [src]="project.imageUrl" [alt]="project.name" class="project-img" />
+        <h2 class="project-title">{{ project.name }}</h2>
+        <p>{{ getCategoryName(project.categoryIds[0]) }}</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" (click)="openUrl(project.githubUrl || '')">Github</button>
+          <button class="btn btn-color-2" (click)="openUrl(project.liveUrl || '')">Live Demo</button>
+        </div>
+      </div>
+    }
+  </div>
+</section>

@@ -6,7 +6,7 @@ import { IProject, ICategory } from '../interfaces/project';
 @Injectable({
   providedIn: 'root',
 })
-export class Projects {
+export class ProjectsService {
   private baseUrl = 'https://my-json-server.typicode.com/christyantoun/frontend-session';
 
   constructor(private http: HttpClient) {}

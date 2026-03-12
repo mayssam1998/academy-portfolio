@@ -1,10 +1,11 @@
 export interface IProject {
   id: number;
-  title: string;
-  image: string;
-  githubUrl: string;
-  liveUrl: string;
-  categoryId: number;
+  name: string;
+  imageUrl: string;
+  categoryIds: number[];
+  status: string;
+  githubUrl?: string;
+  liveUrl?: string;
 }
 
 export interface ICategory {

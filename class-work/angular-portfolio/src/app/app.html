@@ -1,0 +1,102 @@
+<app-navbar (scrollRequest)="scrollToSection($event)"></app-navbar>
+
+
+<section id="home" class="hero section">
+  <div class="container">
+    <div class="hero__content">
+      <span class="hero__eyebrow">Welcome to my portfolio</span>
+      <h1 class="hero__title">
+        Hi, I'm <span class="accent">{{ heroName }}</span>
+      </h1>
+      <p class="hero__role">{{ heroRole }}</p>
+      <p class="hero__tagline">{{ heroTagline }}</p>
+      <div class="hero__actions">
+        <button class="btn btn--filled" (click)="scrollToSection('projects')">View My Work</button>
+        <button class="btn" (click)="scrollToSection('contact')">Get In Touch</button>
+      </div>
+    </div>
+    <div class="hero__decoration" aria-hidden="true">
+      <div class="hero__circle hero__circle--1"></div>
+      <div class="hero__circle hero__circle--2"></div>
+      <div class="hero__image-wrapper">
+        <img src="assets/hero-image.jpg" alt="Portrait" class="hero__image">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="projects" class="projects section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Portfolio</span>
+      <h2>Selected <span class="accent">Work</span></h2>
+      <p>A curated selection of projects that showcase my approach to design and engineering.</p>
+    </div>
+
+    <div class="projects__grid">
+      @for (project of projects; track project.title) {
+        <article class="project-card">
+          <div class="project-card__top">
+            <span class="project-card__category">{{ project.category }}</span>
+            <span class="project-card__year">{{ project.year }}</span>
+          </div>
+          <h3 class="project-card__title">{{ project.title }}</h3>
+          <p class="project-card__desc">{{ project.description }}</p>
+          <div class="project-card__tech">
+            @for (tech of project.tech; track tech) {
+              <span class="tech-tag">{{ tech }}</span>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+
+<section id="skills" class="skills section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Expertise</span>
+      <h2>My <span class="accent">Skills</span></h2>
+    </div>
+
+    <div class="skills__grid">
+      @for (skill of skills; track skill.name) {
+        <div class="skill-item">
+          <div class="skill-item__header">
+            <span class="skill-item__name">{{ skill.name }}</span>
+            <span class="skill-item__level">{{ skill.level }}%</span>
+          </div>
+          <div class="skill-item__bar">
+            <div class="skill-item__fill" [style.width.%]="skill.level"></div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="contact section">
+  <div class="container">
+    <div class="contact__inner">
+      <span class="section-label">Contact</span>
+      <h2>Let's <span class="accent">Connect</span></h2>
+      <p>Have a project in mind or just want to say hello? My inbox is always open.</p>
+      <button class="btn btn--filled" (click)="openEmailContact()">Send a Message</button>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <p class="footer__text">
+      &copy; {{ currentYear }} {{ heroName }}. Crafted with Love &amp; Care.
+    </p>
+  </div>
+</footer>
+
+<router-outlet></router-outlet>

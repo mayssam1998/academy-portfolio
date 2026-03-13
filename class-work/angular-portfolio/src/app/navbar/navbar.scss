@@ -1,0 +1,201 @@
+$color-bg:      #0d0d0d;
+$color-accent:  #c8a96e;
+$color-text:    #e8e2d9;
+$color-muted:   #8a8278;
+$color-border:  rgba(200, 169, 110, 0.2);
+$font-body:     'DM Sans', sans-serif;
+$font-display:  'Playfair Display', Georgia, serif;
+
+$nav-height:        72px;
+$transition-base:   300ms ease;
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: $nav-height;
+  background: transparent;
+  transition: background $transition-base, box-shadow $transition-base;
+
+  
+  &--scrolled {
+    background: rgba(13, 13, 13, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 1px 0 $color-border;
+  }
+
+  
+  &__container {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  
+  &__logo {
+    cursor: pointer;
+    text-decoration: none;
+
+    &-text {
+      font-family: $font-display;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $color-text;
+      letter-spacing: -0.01em;
+    }
+
+    &-accent {
+      color: $color-accent;
+    }
+  }
+
+  
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    list-style: none;
+    margin: 0 auto; // center in available space
+
+    @media (max-width: 768px) { display: none; }
+  }
+
+  &__item { display: flex; }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding: 0.4rem 1rem;
+    font-family: $font-body;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: $color-muted;
+    cursor: pointer;
+    transition: color $transition-base;
+    text-transform: uppercase;
+
+   
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 1rem;
+      right: 1rem;
+      height: 1px;
+      background: $color-accent;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform $transition-base;
+    }
+
+    &:hover {
+      color: $color-text;
+      opacity: 1;
+
+      &::after { transform: scaleX(1); }
+    }
+
+    
+    &--active {
+      color: $color-accent;
+
+      &::after { transform: scaleX(1); }
+    }
+  }
+
+  
+  &__cta {
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    padding: 0.5rem 1.4rem;
+    cursor: pointer;
+
+    @media (max-width: 768px) { display: none; }
+  }
+
+  
+  &__hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+    @media (max-width: 768px) { display: flex; }
+
+    span {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: $color-text;
+      transition: transform $transition-base, opacity $transition-base;
+    }
+
+    
+    &--open {
+      span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
+      span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+      span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
+    }
+  }
+
+ 
+  &__mobile {
+    position: absolute;
+    top: $nav-height;
+    left: 0;
+    right: 0;
+    background: rgba(13, 13, 13, 0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid $color-border;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height $transition-base, padding $transition-base;
+
+    &--open {
+      max-height: 280px;
+      padding: 1rem 0 1.5rem;
+    }
+  }
+
+  &__mobile-links {
+    list-style: none;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__mobile-link {
+    display: block;
+    padding: 0.7rem 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $color-muted;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(200, 169, 110, 0.08);
+    transition: color $transition-base;
+
+    &:hover,
+    &--active {
+      color: $color-accent;
+      opacity: 1;
+    }
+  }
+}

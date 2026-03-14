@@ -1,0 +1,12 @@
+<nav id="desktop-nav">
+  <div class="logo">Name | Software Engineer</div>
+  <div>
+    @if (isMenuOpen) {
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    }
+  </div>
+  <button (click)="toggleMenu()">☰</button>
+</nav>

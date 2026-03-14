@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AboutCardComponent } from '../../shared/components/about-card/about-card.component';
+
 @Component({
   selector: 'app-about',
   standalone: true,

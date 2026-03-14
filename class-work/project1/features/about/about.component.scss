@@ -1,6 +1,5 @@
 section {
   padding-top: 4vh;
-  height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -16,69 +15,48 @@ p {
 
 .section__text__p1 {
   text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .title {
   font-size: 3rem;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .section-container {
   display: flex;
   gap: 4rem;
-  height: 50%;
 }
 
 .about-containers {
+  display: flex;
+  justify-content: center;
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
-.about-details-container {
-  justify-content: center;
-  flex-direction: column;
-}
-
-.about-containers,
 .about-details-container {
   display: flex;
   justify-content: center;
-}
-
-.details-container {
-  padding: 1.5rem;
-  flex: 1;
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  max-width: 300px;
-  text-align: center;
-}
-
-.icon {
-  cursor: pointer;
-  height: 2rem;
+  flex-direction: column;
+  width: 100%;
 }
 
 .text-container {
   max-width: 800px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 1400px) {
-  .about-containers {
-    flex-wrap: wrap;
-    min-width: fit-content;
+  section {
+    margin: 0 2rem;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  section,
-  .section-container {
-    height: fit-content;
-  }
-
   section {
     margin: 0 5%;
   }

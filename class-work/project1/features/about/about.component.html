@@ -5,27 +5,22 @@
   <div class="section-container">
     <div class="about-details-container">
       <div class="about-containers">
-        <div class="details-container">
-          <img src="assets/experience.png" alt="Experience icon" class="icon" />
-          <h3>Experience</h3>
-          <p>4+ years <br />Web Development</p>
-        </div>
-
-        <div class="details-container">
-          <img src="assets/education.png" alt="Education icon" class="icon" />
-          <h3>Education</h3>
-          <p>B.Sc. Bachelors Degree<br />University Name</p>
-        </div>
+        @for (card of aboutCards; track card.title) {
+          <app-about-card
+            [icon]="card.icon"
+            [title]="card.title"
+            [line1]="card.line1"
+            [line2]="card.line2">
+          </app-about-card>
+        }
       </div>
 
       <div class="text-container">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-          reprehenderit et laborum, rem, dolore eum quod voluptate
-          exercitationem nobis, nihil esse debitis maxime facere minus sint
-          delectus velit in eos quo officiis explicabo deleniti dignissimos.
-          Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-          reiciendis ea magnam? Nulla, impedit fuga!
+          reprehenderit et laborum, rem, dolore eum quod voluptate exercitationem
+          nobis, nihil esse debitis maxime facere minus sint delectus velit in eos
+          quo officiis explicabo deleniti dignissimos.
         </p>
       </div>
     </div>

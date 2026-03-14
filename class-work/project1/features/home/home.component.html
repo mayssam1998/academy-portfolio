@@ -12,27 +12,16 @@
     </div>
 
     <div class="btn-container">
-      <button class="btn btn-color-2" (click)="openCV()">
-        Download CV
-      </button>
-      <button class="btn btn-color-1" (click)="goToContact()">
-        Contact Info
-      </button>
+      <button class="btn btn-color-2" (click)="openCV()">Download CV</button>
+      <button class="btn btn-color-1" (click)="contactInfo()">Contact Info</button>
     </div>
 
     <div id="socials-container">
-      <img
-        src="assets/linkedin.png"
-        alt="My LinkedIn profile"
-        class="icon"
-        (click)="openLinkedIn()"
-      />
-      <img
-        src="assets/github.png"
-        alt="My Github profile"
-        class="icon"
-        (click)="openGithub()"
-      />
+      <img src="assets/linkedin.png" alt="LinkedIn" class="icon" (click)="openLinkedIn()" />
+      <img src="assets/github.png" alt="GitHub" class="icon" (click)="openGithub()" />
     </div>
   </div>
 </section>
+
+<app-about></app-about>
+<app-projects></app-projects>

@@ -1,0 +1,53 @@
+section {
+  padding-top: 4vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+#projects {
+  position: relative;
+}
+
+.section__text__p1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1400px) {
+  section {
+    margin: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  section {
+    margin: 0 5%;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+}

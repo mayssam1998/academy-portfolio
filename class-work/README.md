@@ -49,12 +49,12 @@ Now you can access your application at http://localhost:4200/.
     ```
   ng g c navbar
   ```
-- [ ] Copy the navbar section from the vanilla project and paste it into the navbar component you just created
+- [ ] Copy the navbar section from the vanilla project and paste it into app.html 
 - [ ] Include component specific styles in the component's stylesheet
 - [ ] Update the css styles used to use scss styles
 - [ ] Include global styles in styles.scss
 - [ ] Commit and push the changes made to the navbar component
-- [ ]  Copy other projects section from the vanilla project and do the same
+- [ ]  Copy other projects section from the vanilla project to components and apply routing to navigate
 - Inspect the browser and go over prominent dev tool features 
 - Bonus: Write and link a function to the TS file
 

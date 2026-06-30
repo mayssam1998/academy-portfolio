@@ -54,6 +54,7 @@ Now you can access your application at http://localhost:4200/.
 - [ ] Update the css styles used to use scss styles
 - [ ] Include global styles in styles.scss
 - [ ] Commit and push the changes made to the navbar component
+- [ ]  Copy other projects section from the vanilla project and do the same
 - Inspect the browser and go over prominent dev tool features 
 - Bonus: Write and link a function to the TS file
 

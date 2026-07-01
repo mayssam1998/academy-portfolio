@@ -1,0 +1,28 @@
+.navbar {
+  width: 80%;
+  margin: 35px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+
+  a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  a.active {
+    font-weight: 700;
+  }
+}

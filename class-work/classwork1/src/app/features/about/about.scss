@@ -1,0 +1,35 @@
+/* ===== ABOUT SECTION STYLES ===== */
+
+.section-container {
+  display: flex;
+  gap: 4rem;
+  height: 50%;
+}
+
+#about {
+  position: relative;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-details-container,
+.about-containers {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .section-container {
+    display: block;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .text-container {
+    text-align: justify;
+  }
+}
